@@ -15,4 +15,7 @@ angular.module("Prometheus",
   $rootScope.alert = function(thing) {
     alert(thing);
   };
+}])
+.config(['$httpProvider', function($httpProvider) {
+  $httpProvider.defaults.withCredentials = true;
 }]);
